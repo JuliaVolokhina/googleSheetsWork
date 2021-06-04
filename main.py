@@ -1,3 +1,4 @@
+!pip install numpy==1.16.1
 import pandas as pd
 import numpy as np
 import keras
