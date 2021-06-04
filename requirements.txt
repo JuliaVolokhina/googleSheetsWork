@@ -1,6 +1,7 @@
 flask
 numpy
 pandas
+pickle
 openpyxl
 sklearn
 keras
