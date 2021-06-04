@@ -26,7 +26,7 @@ model = load_model('schoolModel.h5')
 def predict(text):
     encoder = LabelEncoder()
     encoder.classes_ = np.load('classes.npy', allow_pickle=True)
-    encoder.transform(Y)
+    #encoder.transform(Y)
     X_new = [text]
     #tokenizer.fit_on_texts(X)
     x_test = tokenizer.texts_to_matrix(X_new, mode='binary')
