@@ -25,7 +25,7 @@ model = load_model('schoolModel.h5')
 @app.route('/<text>')
 def predict(text):
     encoder = LabelEncoder()
-    encoder.classes_ = numpy.load('classes.npy')
+    encoder.classes_ = np.load('classes.npy')
     encoder.transform(Y)
     X_new = [text]
     #tokenizer.fit_on_texts(X)
