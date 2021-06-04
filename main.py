@@ -1,4 +1,3 @@
-!pip install numpy==1.16.1
 import pandas as pd
 import numpy as np
 import keras
@@ -26,7 +25,7 @@ model = load_model('schoolModel.h5')
 @app.route('/<text>')
 def predict(text):
     encoder = LabelEncoder()
-    encoder.classes_ = np.load('classes.npy')
+    encoder.classes_ = np.load('classes.npy', allow_pickle=True)
     encoder.transform(Y)
     X_new = [text]
     #tokenizer.fit_on_texts(X)
